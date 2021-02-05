@@ -34,6 +34,10 @@
             this.delAllButton = new System.Windows.Forms.Button();
             this.exitButton = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.hourBox = new System.Windows.Forms.TextBox();
             this.minuteBox = new System.Windows.Forms.TextBox();
@@ -45,16 +49,12 @@
             this.warningLabel = new System.Windows.Forms.Label();
             this.alarmLabel = new System.Windows.Forms.Label();
             this.nameBox = new System.Windows.Forms.TextBox();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // addButton
             // 
-            this.addButton.Location = new System.Drawing.Point(909, 165);
+            this.addButton.Location = new System.Drawing.Point(909, 214);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(75, 23);
             this.addButton.TabIndex = 0;
@@ -64,7 +64,7 @@
             // 
             // delButton
             // 
-            this.delButton.Location = new System.Drawing.Point(909, 221);
+            this.delButton.Location = new System.Drawing.Point(909, 270);
             this.delButton.Name = "delButton";
             this.delButton.Size = new System.Drawing.Size(75, 23);
             this.delButton.TabIndex = 1;
@@ -74,7 +74,7 @@
             // 
             // delAllButton
             // 
-            this.delAllButton.Location = new System.Drawing.Point(909, 282);
+            this.delAllButton.Location = new System.Drawing.Point(909, 331);
             this.delAllButton.Name = "delAllButton";
             this.delAllButton.Size = new System.Drawing.Size(75, 23);
             this.delAllButton.TabIndex = 2;
@@ -83,7 +83,7 @@
             // 
             // exitButton
             // 
-            this.exitButton.Location = new System.Drawing.Point(909, 407);
+            this.exitButton.Location = new System.Drawing.Point(909, 456);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(75, 23);
             this.exitButton.TabIndex = 3;
@@ -102,99 +102,11 @@
             this.Column1,
             this.Column2,
             this.Column3});
-            this.dataGridView1.Location = new System.Drawing.Point(89, 139);
+            this.dataGridView1.Location = new System.Drawing.Point(89, 188);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(781, 348);
             this.dataGridView1.TabIndex = 4;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(542, 90);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 5;
-            // 
-            // hourBox
-            // 
-            this.hourBox.Location = new System.Drawing.Point(758, 90);
-            this.hourBox.Name = "hourBox";
-            this.hourBox.Size = new System.Drawing.Size(53, 20);
-            this.hourBox.TabIndex = 6;
-            // 
-            // minuteBox
-            // 
-            this.minuteBox.Location = new System.Drawing.Point(817, 90);
-            this.minuteBox.Name = "minuteBox";
-            this.minuteBox.Size = new System.Drawing.Size(53, 20);
-            this.minuteBox.TabIndex = 7;
-            // 
-            // descriptionBox
-            // 
-            this.descriptionBox.Location = new System.Drawing.Point(225, 90);
-            this.descriptionBox.Name = "descriptionBox";
-            this.descriptionBox.Size = new System.Drawing.Size(311, 20);
-            this.descriptionBox.TabIndex = 8;
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // saveButton
-            // 
-            this.saveButton.Location = new System.Drawing.Point(909, 345);
-            this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(75, 23);
-            this.saveButton.TabIndex = 9;
-            this.saveButton.Text = "Save";
-            this.saveButton.UseVisualStyleBackColor = true;
-            // 
-            // clockLabel
-            // 
-            this.clockLabel.AutoSize = true;
-            this.clockLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.clockLabel.Location = new System.Drawing.Point(435, 46);
-            this.clockLabel.Name = "clockLabel";
-            this.clockLabel.Size = new System.Drawing.Size(71, 20);
-            this.clockLabel.TabIndex = 10;
-            this.clockLabel.Text = "00:00:00";
-            // 
-            // dateLabel
-            // 
-            this.dateLabel.AutoSize = true;
-            this.dateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.dateLabel.Location = new System.Drawing.Point(547, 46);
-            this.dateLabel.Name = "dateLabel";
-            this.dateLabel.Size = new System.Drawing.Size(163, 20);
-            this.dateLabel.TabIndex = 11;
-            this.dateLabel.Text = "00.00.0000, Weekday";
-            // 
-            // warningLabel
-            // 
-            this.warningLabel.AutoSize = true;
-            this.warningLabel.ForeColor = System.Drawing.Color.Red;
-            this.warningLabel.Location = new System.Drawing.Point(274, 474);
-            this.warningLabel.Name = "warningLabel";
-            this.warningLabel.Size = new System.Drawing.Size(0, 13);
-            this.warningLabel.TabIndex = 12;
-            // 
-            // alarmLabel
-            // 
-            this.alarmLabel.AutoSize = true;
-            this.alarmLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.alarmLabel.Location = new System.Drawing.Point(675, 474);
-            this.alarmLabel.Name = "alarmLabel";
-            this.alarmLabel.Size = new System.Drawing.Size(0, 25);
-            this.alarmLabel.TabIndex = 13;
-            // 
-            // nameBox
-            // 
-            this.nameBox.Location = new System.Drawing.Point(89, 90);
-            this.nameBox.Name = "nameBox";
-            this.nameBox.Size = new System.Drawing.Size(130, 20);
-            this.nameBox.TabIndex = 14;
             // 
             // Column4
             // 
@@ -214,13 +126,101 @@
             this.Column2.HeaderText = "Date";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
-            this.Column2.Width = 150;
             // 
             // Column3
             // 
-            this.Column3.HeaderText = "Event ID";
+            this.Column3.HeaderText = "Addition Date";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(405, 103);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 5;
+            // 
+            // hourBox
+            // 
+            this.hourBox.Location = new System.Drawing.Point(621, 103);
+            this.hourBox.Name = "hourBox";
+            this.hourBox.Size = new System.Drawing.Size(53, 20);
+            this.hourBox.TabIndex = 6;
+            // 
+            // minuteBox
+            // 
+            this.minuteBox.Location = new System.Drawing.Point(680, 103);
+            this.minuteBox.Name = "minuteBox";
+            this.minuteBox.Size = new System.Drawing.Size(53, 20);
+            this.minuteBox.TabIndex = 7;
+            // 
+            // descriptionBox
+            // 
+            this.descriptionBox.Location = new System.Drawing.Point(89, 152);
+            this.descriptionBox.Name = "descriptionBox";
+            this.descriptionBox.Size = new System.Drawing.Size(781, 20);
+            this.descriptionBox.TabIndex = 8;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // saveButton
+            // 
+            this.saveButton.Location = new System.Drawing.Point(909, 394);
+            this.saveButton.Name = "saveButton";
+            this.saveButton.Size = new System.Drawing.Size(75, 23);
+            this.saveButton.TabIndex = 9;
+            this.saveButton.Text = "Save";
+            this.saveButton.UseVisualStyleBackColor = true;
+            // 
+            // clockLabel
+            // 
+            this.clockLabel.AutoSize = true;
+            this.clockLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.clockLabel.Location = new System.Drawing.Point(426, 30);
+            this.clockLabel.Name = "clockLabel";
+            this.clockLabel.Size = new System.Drawing.Size(71, 20);
+            this.clockLabel.TabIndex = 10;
+            this.clockLabel.Text = "00:00:00";
+            // 
+            // dateLabel
+            // 
+            this.dateLabel.AutoSize = true;
+            this.dateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.dateLabel.Location = new System.Drawing.Point(538, 30);
+            this.dateLabel.Name = "dateLabel";
+            this.dateLabel.Size = new System.Drawing.Size(163, 20);
+            this.dateLabel.TabIndex = 11;
+            this.dateLabel.Text = "00.00.0000, Weekday";
+            // 
+            // warningLabel
+            // 
+            this.warningLabel.AutoSize = true;
+            this.warningLabel.ForeColor = System.Drawing.Color.Red;
+            this.warningLabel.Location = new System.Drawing.Point(274, 523);
+            this.warningLabel.Name = "warningLabel";
+            this.warningLabel.Size = new System.Drawing.Size(0, 13);
+            this.warningLabel.TabIndex = 12;
+            // 
+            // alarmLabel
+            // 
+            this.alarmLabel.AutoSize = true;
+            this.alarmLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.alarmLabel.Location = new System.Drawing.Point(675, 523);
+            this.alarmLabel.Name = "alarmLabel";
+            this.alarmLabel.Size = new System.Drawing.Size(0, 25);
+            this.alarmLabel.TabIndex = 13;
+            // 
+            // nameBox
+            // 
+            this.nameBox.Location = new System.Drawing.Point(269, 103);
+            this.nameBox.Name = "nameBox";
+            this.nameBox.Size = new System.Drawing.Size(130, 20);
+            this.nameBox.TabIndex = 14;
+            this.nameBox.TextChanged += new System.EventHandler(this.nameBox_TextChanged);
             // 
             // MainWindow
             // 

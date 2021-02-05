@@ -48,11 +48,13 @@ namespace mp2021
             }
         }
 
-        // Adding information about new event - description and time
+        // Adding information about new event - description, date and time of event and addition
         private void addButton_Click(object sender, EventArgs e)
         {
             string datetimeText;
-            Int64 additionDate;
+            string additionDate;
+            DateTime timeDet;
+            //Int64 idNumber;
 
             //var eventTime = new DateTime();
 
@@ -64,10 +66,16 @@ namespace mp2021
             {
                 datetimeText = String.Format("{0,2:D2}.{1,2:D2}.{2} {3,2:D2}:{4,2:D2}", dateTimePicker1.Value.Day, dateTimePicker1.Value.Month,
                 dateTimePicker1.Value.Year, Convert.ToByte(hourBox.Text), Convert.ToByte(minuteBox.Text));
-                additionDate = ConvertToID();
+
+                additionDate = String.Format("{0,2:D2}.{1,2:D2}.{2} {3,2:D2}:{4,2:D2}", DateTime.Now.Day, DateTime.Now.Month, DateTime.Now.Year,
+                    DateTime.Now.Hour, DateTime.Now.Minute);
 
                 dataGridView1.Rows.Add(nameBox.Text, descriptionBox.Text, datetimeText, additionDate);
                 warningLabel.Text = String.Format("");
+
+                timeDet = new DateTime(dateTimePicker1.Value.Year, dateTimePicker1.Value.Month, dateTimePicker1.Value.Day, Convert.ToByte(hourBox.Text), Convert.ToByte(minuteBox.Text), 0);
+
+                listOfEvents.Add(new SingleEvent { EventName = nameBox.Text, Description = descriptionBox.Text, TimeDetails = timeDet, EventID = ConvertToID() });
             }
         }
 
@@ -88,6 +96,11 @@ namespace mp2021
                 + DateTime.Now.Hour * 1000000 + DateTime.Now.Minute * 10000 + DateTime.Now.Second * 100 + num % 100;
 
             return result;
+        }
+
+        private void nameBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
